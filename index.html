@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wildan-portfolio-TailwindCSS</title>
+  <link href="style.css" rel="stylesheet">
+
+  <!-- ~~~~~~~~~ CDNJS Font-Awesome ~~~~~~~~~ -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body class="bg-white-theme text-dark-primary-dark">
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Header Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<header class="sticky top-0 bg-white-theme z-50 shadow-sm rounded-br-3xl rounded-bl-3xl">
+    <nav class="container flex justify-between items-center">
+        <div class="py-3 text-primary text-3xl font-Poppins font-extrabold hover:opacity-80">
+            <a href="#home"><img src="/img/wildan1.jpeg" alt="Wildan profile" class="w-9 inline-flex text-center justify-center rounded-full bg-gradient-to-r from-teal-400 to-blue-500 p-1 drop-shadow-md transform hover:scale-105 transition-transform duration-500"> Wil<span class="text-dark-primary-dark">dan</span><span class="text-primary">.</span></a>
+        </div>
+
+        <div>
+            <ul class="hidden lg:flex font-semibold gap-6">
+                <li><a href="#home" class="hover:text-primary hover:underline underline-offset-8 decoration-2 duration-200 ease-in-out">Home</a></li>
+                <li><a href="#about" class="hover:text-primary hover:underline underline-offset-8 decoration-2 duration-200 ease-in-out">About</a></li>
+                <li><a href="#skills" class="hover:text-primary hover:underline underline-offset-8 decoration-2 duration-200 ease-in-out">Skills</a></li>
+                <li><a href="#project" class="hover:text-primary hover:underline underline-offset-8 decoration-2 duration-200 ease-in-out">Project</a></li>
+                <li><a href="#contact" class="hover:text-primary hover:underline underline-offset-8 decoration-2 duration-200 ease-in-out">Contact</a></li>
+            </ul>
+        </div>
+        <!-- Mobile screen -->
+        <div id="hamburger" class="lg:hidden cursor-pointer z-50 text-2xl">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <div id="menu" class="hidden bg-white-theme shadow-md rounded-br-3xl rounded-bl-3xl h-[60vh] absolute inset-0">
+            <ul class="h-full flex flex-col items-center justify-center gap-8 py-20 font-semibold">
+                <li><a href="#home" class="hover:text-primary hover:underline underline-offset-8 decoration-2 duration-200 ease-in-out">Home</a></li>
+                <li><a href="#about" class="hover:text-primary hover:underline underline-offset-8 decoration-2 duration-200 ease-in-out">About</a></li>
+                <li><a href="#skills" class="hover:text-primary hover:underline underline-offset-8 decoration-2 duration-200 ease-in-out">Skills</a></li>
+                <li><a href="#project" class="hover:text-primary hover:underline underline-offset-8 decoration-2 duration-200 ease-in-out">Project</a></li>
+                <li><a href="#contact" class="hover:text-primary hover:underline underline-offset-8 decoration-2 duration-200 ease-in-out">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Hero Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section id="home" class="relative">
+    <div class="container py-24 lg:py-32">
+        <div class="flex flex-col items-center justify-center lg:flex-row">
+            <div class="order-2 lg:order-1 text-center lg:w-1/2 lg:text-left lg:pr-10">
+                <h2 class="text-gray-500 text-base font-semibold mb-0.5 lg:mb-2 leading-relaxed lg:text-xl">Hallo semuanya 👋, saya</h2>
+                <h1 class="text-3xl lg:text-4xl font-bold font-Poppins mb-1 lg:mb-3 leading-snug">Wildan <span class="text-primary">Rafieu Damara</span></h1>
+                <p class="text-base mb-3 lg:mb-6 lg:pr-12 leading-relaxed text-slate-500">
+                    Tidur itu enak dan coding itu belajar — jadi saya lakukan keduanya dengan penuh harapan, sambil mencari jawaban atas bug yang <span class="font-bold">mengganggu!</span>
+                </p>
+                
+                <div class="flex flex-col lg:flex-row items-center lg:items-start mt-4 lg:mt-0">
+                    <button class="btn rounded-full px-6 py-3 font-semibold bg-gradient-to-r from-teal-400 to-blue-500 text-white-theme shadow-md hover:from-teal-500 hover:to-blue-600">
+                        <a href="resume.pdf" target="_blank">Download CV</a><span> <i class="fa-solid fa-download"></i></span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="w-48 order-1 lg:order-2 mb-4 lg:justify-end lg:mb-0 lg:w-72">
+                <img src="img/wildan1.jpeg" alt="Wildan profile" class="rounded-full drop-shadow-xl transform bg-dark-white hover:scale-105 transition-transform duration-500">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ About Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section id="about" class="py-24">
+    <h3 class="text-center justify-center text-3xl text-primary font-bold mb-6 lg:mb-24">
+        About Me!
+    </h3>
+    <div class="container">
+        <div class="flex flex-wrap">
+            <div class="w-full px-4 mb-10 lg:w-1/2">
+                <div class="bg-slate-300 bg-opacity-20 rounded-lg p-6 shadow-md flex-1">
+                    <p class="font-medium text-base text-slate-500 max-w-xl">
+                        Halo 👋, saya <span class="font-bold">Wildan Rafieu Damara</span>! Saat ini, saya sedang belajar dan berjuang keras di dunia coding.
+                        <br><br>Coding ternyata tidak semudah tidur 🤦‍♂️ bahkan tidur pun terkadang menjadi sulit karena memikirkan bug-bug yang belum teratasi. Jadi, jika Anda punya tips, trik, atau hanya ingin berbagi momen kesulitan, saya sangat terbuka! Mari kita hadapi tantangan ini bersama. Kita tidak mau menyerah hanya karena satu <span class="line-through">ribu</span> error, kan?
+                        <br><br>Siap berkolaborasi dan tertawa di tengah perjuangan ini!
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-full px-4 lg:w-1/2">
+                <h3 class="font-semibold text-dark-primary-dark text-2xl mb-4">Mari Berteman</h3>
+                <p class="font-medium text-base text-slate-500 mb-6">
+                Mari berteman dan kita buat perjalanan ini menjadi lebih seru!
+                <br><br>Kunjungi saya dengan cara <span class="font-bold">klik</span> icon media sosial di bawah ini :
+                </p>
+                <!-- Icon Media Sosial -->
+                 <div class="flex items-center gap-3">
+                    <!-- Github -->
+                     <a href="https://github.com/rafidamara99" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-500 text-slate-500 hover:border-none hover:bg-gradient-to-r from-teal-400 to-blue-500 hover:text-white-theme duration-200 ease-in-out">
+                        <i class="fa-brands fa-github text-2xl"></i>
+                    </a>
+                    <!-- Instagram -->
+                     <a href="https://github.com/rafidamara99" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-500 text-slate-500 hover:border-none hover:bg-gradient-to-r from-teal-400 to-blue-500 hover:text-white-theme duration-200 ease-in-out">
+                        <i class="fa-brands fa-instagram text-2xl"></i>
+                    </a>
+                    <!-- Twitter / x -->
+                     <a href="https://github.com/rafidamara99" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-500 text-slate-500 hover:border-none hover:bg-gradient-to-r from-teal-400 to-blue-500 hover:text-white-theme duration-200 ease-in-out">
+                        <i class="fa-brands fa-x-twitter text-2xl"></i>
+                    </a>
+                    <!-- LinkedIn -->
+                     <a href="https://github.com/rafidamara99" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-500 text-slate-500 hover:border-none hover:bg-gradient-to-r from-teal-400 to-blue-500 hover:text-white-theme duration-200 ease-in-out">
+                        <i class="fa-brands fa-linkedin text-2xl"></i>
+                    </a>
+                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Skills Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Portfilio Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Contact Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Footer Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Any feature Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+
+
+<!-- Script JS -->
+ <script src="script.js"></script>
+</body>
+</html>

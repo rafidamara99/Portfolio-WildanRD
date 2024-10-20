@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500;600;700&family=Protest+Guerrilla&family=Roboto:wght@400;500;700&family=Sacramento&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scroll HTML */
+
+html {
+    scroll-behavior: smooth;
+  }
+
+  .active {
+    color: #3457D5; /* Ganti dengan warna yang diinginkan */
+    font-weight: bold; /* Atau gaya lain sesuai kebutuhan */
+}
