@@ -9,8 +9,3 @@
 html {
     scroll-behavior: smooth;
   }
-
-  .active {
-    color: #3457D5; /* Ganti dengan warna yang diinginkan */
-    font-weight: bold; /* Atau gaya lain sesuai kebutuhan */
-}

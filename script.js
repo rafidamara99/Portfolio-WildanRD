@@ -25,3 +25,77 @@ document.addEventListener('click', (event) => {
         faSolid.classList.remove('fa-xmark'); // Kembali ke ikon hamburger
     }
 });
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ JavaScript untuk kontak menu ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+const form = document.getElementById('contact-form');
+const emailInput = document.getElementById('email');
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault(); // Mencegah pengiriman formulir untuk validasi
+    
+    // Validasi email
+    if (!validateEmail(emailInput.value)) {
+        emailInput.classList.add('border-red-500');
+        emailInput.classList.remove('border-gray-300');
+        return;
+    } else {
+        emailInput.classList.remove('border-red-500');
+        emailInput.classList.add('border-gray-300');
+    }
+    
+    // Kirim formulir jika validasi berhasil
+    fetch(form.action, {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json'
+        },
+        body: new FormData(form)
+    }).then(response => {
+        if (response.ok) {
+            return response.json(); // Pastikan response dalam format JSON
+        } else {
+            throw new Error('Network response was not ok.');
+        }
+    }).then(data => {
+        // Jika berhasil, kosongkan formulir dan beri tahu pengguna
+        form.reset();
+        alert('Pesan Anda telah berhasil dikirim!');
+    }).catch(error => {
+        console.error('Terjadi kesalahan:', error);
+        alert('Terjadi kesalahan saat mengirim pesan. Silakan coba lagi.');
+    });
+});
+
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+};
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ JavaScript untuk back to top ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+// Select the back to top button
+const backToTopButton = document.getElementById('back-to-top');
+
+// Get the height of the home section
+const homeSection = document.getElementById('home');
+
+// Initially hide the button
+backToTopButton.style.display = 'none';
+
+// Show the button when the user scrolls past the home section
+window.onscroll = function() {
+    if (window.scrollY > homeSection.offsetHeight) {
+        backToTopButton.style.display = 'block';
+    } else {
+        backToTopButton.style.display = 'none';
+    }
+};
+
+// Smooth scroll to the top when the button is clicked
+backToTopButton.onclick = function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // This makes the scroll smooth
+    });
+};
