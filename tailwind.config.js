@@ -6,19 +6,10 @@ module.exports = {
       colors: {
         // Light mode
 
-        "gray-theme": "#E1E4EC",
-        "primary": "#3457D5",
-        "white-theme": "#FAFAFA",
-        
-        // Dark mode
-        
-        "nav": "#1D1D1D",
-        "dark-primary": "#1E2126",
-        "dark-primary-dark": "#282828",
-        "dark-secondary": "#ff7d3b",
-        "dark-gray": "#333",
-        "dark-white": "#fff",
-        "dark-blob": "#A427DF",
+        "bg-nav": "#ffff",
+        "primary": "#2563eb",
+        "text-color-LM": "#6b7280",
+        "text-color-black": "#282828",
       },
 
       fontFamily: {

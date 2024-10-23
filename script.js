@@ -26,6 +26,35 @@ document.addEventListener('click', (event) => {
     }
 });
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ JavaScript untuk dark mode ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+// Mengambil elemen tombol, body, dan ikon
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+const body = document.body;
+const toggleIcon = document.getElementById('toggle-icon');
+
+// Memeriksa apakah mode gelap sudah diaktifkan sebelumnya
+if (localStorage.getItem('dark-mode') === 'enabled') {
+    body.classList.add('dark-mode');
+    toggleIcon.classList.remove('fa-sun');
+    toggleIcon.classList.add('fa-moon');
+}
+
+// Menambahkan event listener untuk tombol
+darkModeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+
+    // Mengubah ikon berdasarkan status mode
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('dark-mode', 'enabled');
+        toggleIcon.classList.remove('fa-sun');
+        toggleIcon.classList.add('fa-moon');
+    } else {
+        localStorage.removeItem('dark-mode');
+        toggleIcon.classList.remove('fa-moon');
+        toggleIcon.classList.add('fa-sun');
+    }
+});
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ JavaScript untuk kontak menu ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
@@ -74,6 +103,7 @@ function validateEmail(email) {
 };
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ JavaScript untuk back to top ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
 // Select the back to top button
 const backToTopButton = document.getElementById('back-to-top');
 

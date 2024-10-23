@@ -9,3 +9,42 @@
 html {
     scroll-behavior: smooth;
   }
+
+/* Gaya untuk mode gelap */
+.dark-mode {
+  background-color: #121212; /* Warna latar belakang gelap */
+  color: #ffffff; /* Warna teks terang */
+}
+
+.dark-mode header {
+  background-color: #1e1e1e; /* Warna latar belakang header */
+}
+
+.dark-mode  #menu {
+  background-color: #1e1e1e; /* Warna latar belakang header */
+}
+
+.dark-mode .bg-slate-100 {
+  background-color: #2a2a2a; /* Warna latar belakang untuk elemen dengan kelas bg-slate-100 */
+}
+
+.dark-mode .bg-slate-300 {
+  background-color: #3a3a3a; /* Warna latar belakang untuk elemen dengan kelas bg-slate-300 */
+}
+
+.dark-mode .text-text-color-LM {
+  color: #b0b0b0; /* Warna teks untuk elemen dengan kelas text-text-color-LM */
+}
+
+.dark-mode .text-text-color-black {
+  color: #ffff; /* Warna teks untuk elemen dengan kelas text-text-color-LM */
+}
+
+.dark-mode code {
+  background-color: #2e2e2e; /* Warna latar belakang untuk elemen kode */
+  color: #f8f8f2; /* Warna teks untuk elemen kode */
+}
+
+.fa-moon {
+  color: #ffff;
+}
