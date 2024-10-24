@@ -26,13 +26,23 @@
                 <li><a href="#skills" class="hover:text-primary hover:underline underline-offset-8 decoration-2 duration-200 ease-in-out">Skills</a></li>
                 <li><a href="#project" class="hover:text-primary hover:underline underline-offset-8 decoration-2 duration-200 ease-in-out">Project</a></li>
                 <li><a href="#contact" class="hover:text-primary hover:underline underline-offset-8 decoration-2 duration-200 ease-in-out">Contact</a></li>
+                <!-- Toggle Dark Mode -->
+                <div id="dark-mode-toggle" class="cursor-pointer text-yellow-400 items-center text-xl">
+                    <i id="toggle-icon" class="fa-solid fa-sun"></i>
+                </div>
             </ul>
         </div>
         
         <!-- Mobile screen -->
-        <div id="hamburger" class="lg:hidden cursor-pointer z-50 text-2xl">
-            <i class="fa-solid fa-bars"></i>
-        </div>
+        <div class="flex gap-4 z-50 items-center lg:hidden">
+             <!-- Toggle Dark Mode -->
+             <div id="dark-mode-mobile" class="cursor-pointer text-yellow-400 items-center text-xl">
+                 <i id="toggle-icon-mobile" class="fa-solid fa-sun"></i>
+             </div>
+             <div id="hamburger" class="cursor-pointer text-2xl">
+                 <i id="toggle-hamburger" class="fa-solid fa-bars"></i>
+             </div>
+         </div>
 
         <div id="menu" class="hidden bg-white shadow-md rounded-br-3xl rounded-bl-3xl h-[60vh] absolute inset-0">
             <ul class="h-full flex flex-col items-center justify-center gap-8 py-20 font-semibold">
@@ -44,10 +54,6 @@
             </ul>
         </div>
 
-        <!-- Toggle Dark Mode -->
-        <button id="dark-mode-toggle" class="cursor-pointer text-yellow-400 items-center">
-            <i id="toggle-icon" class="fa-solid fa-sun"></i>
-        </button>
     </nav>
 </header>
 
@@ -133,10 +139,10 @@
                 <div class="bg-slate-300 bg-opacity-25 rounded-lg p-6 shadow-lg text-center">
                     <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="transition duration-300 ease-in-out">
                         <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML Logo" class="w-16 h-16 mx-auto mb-2 filter grayscale hover:scale-105 hover:grayscale-0">
+                        <h4 class="font-bold text-xl text-text-color-black mb-2 hover:text-red-600">HTML</h4>
                     </a>
-                    <h4 class="font-bold text-xl text-text-color-black mb-2 hover:text-red-600">HTML</h4>
                     <p class="font-medium text-base text-text-color-LM mb-2">Beginner</p>
-                    <p class="text-sm text-text-color-LM font-semibold">Markup language for creating web pages.</p>
+                    <p class="text-sm text-text-color-black font-semibold">Markup language for creating web pages.</p>
                 </div>
             </div>
             <!-- Skill 2: CSS -->
@@ -144,10 +150,10 @@
                 <div class="bg-slate-300 bg-opacity-25 rounded-lg p-6 shadow-lg text-center">
                     <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="transition duration-300 ease-in-out">
                         <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS Logo" class="w-16 h-16 mx-auto mb-2 filter grayscale hover:scale-105 hover:grayscale-0">
+                        <h4 class="font-bold text-xl text-text-color-black mb-2 hover:text-blue-600">CSS</h4>
                     </a>
-                    <h4 class="font-bold text-xl text-text-color-black mb-2 hover:text-blue-600">CSS</h4>
                     <p class="font-medium text-base text-text-color-LM mb-2">Beginner</p>
-                    <p class="text-sm text-text-color-LM font-semibold">Style sheet language for designing web pages.</p>
+                    <p class="text-sm text-text-color-black font-semibold">Style sheet language for designing web pages.</p>
                 </div>
             </div>
             <!-- Skill 3: JavaScript -->
@@ -155,10 +161,10 @@
                 <div class="bg-slate-300 bg-opacity-25 rounded-lg p-6 shadow-lg text-center">
                     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="transition duration-300 ease-in-out">
                         <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript Logo" class="w-16 h-16 mx-auto mb-2 filter grayscale hover:scale-105 hover:grayscale-0">
+                        <h4 class="font-bold text-xl text-text-color-black mb-2 hover:text-yellow-600">JavaScript</h4>
                     </a>
-                    <h4 class="font-bold text-xl text-text-color-black mb-2 hover:text-yellow-600">JavaScript</h4>
                     <p class="font-medium text-base text-text-color-LM mb-2">Beginner</p>
-                    <p class="text-sm text-text-color-LM font-semibold">Programming language for web development.</p>
+                    <p class="text-sm text-text-color-black font-semibold">Programming language for web development.</p>
                 </div>
             </div>
         </div>
@@ -241,18 +247,18 @@
             </div>
         </div>
             <div class="w-full px-4 lg:px-20 mb-8 justify-center">
-                <form id="contact-form" action="https://formspree.io/f/mldrzyld" method="POST" class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+                <form id="contact-form" action="https://formspree.io/f/mldrzyld" method="POST" class="bg-white p-6 rounded-lg shadow-lg border border-gray-300">
                     <div class="mb-4">
                         <label for="name" class="block text-blue-700 font-semibold mb-2">Nama</label>
-                        <input type="text" id="name" name="name" class="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" required>
+                        <input type="text" id="name" name="name" class="w-full px-3 py-2 bg-slate-300 bg-opacity-20 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" required>
                     </div>
                     <div class="mb-4">
                         <label for="email" class="block text-blue-700 font-semibold mb-2">Email</label>
-                        <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" required>
+                        <input type="email" id="email" name="email" class="w-full px-3 py-2 bg-slate-300 bg-opacity-20 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" required>
                     </div>
                     <div class="mb-4">
                         <label for="message" class="block text-blue-700 font-semibold mb-2">Pesan</label>
-                        <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" required></textarea>
+                        <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 bg-slate-300 bg-opacity-20 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" required></textarea>
                     </div>
                     <button type="submit" class="rounded-full cursor-pointer px-6 py-3 font-semibold border border-primary text-primary hover:border-transparent hover:bg-gradient-to-r from-teal-400 to-blue-500 hover:text-white duration-200 ease-in-out">Kirim Pesan <span><i class="fa-solid fa-mail-bulk"></i></span></button>
                 </form>
@@ -288,7 +294,7 @@
         </div>
 
         <div class="text-center">
-            <p class="text-sm">Designed with <span class="text-pink-400">💗</span> by <span class="text-primary font-bold text-base">Wildan Rafieu Damara</span>.</p>
+            <p class="text-sm">Designed with 💗 by <span class="text-primary font-bold text-base">Wildan Rafieu Damara</span>.</p>
         </div>
     </div>
 </footer>

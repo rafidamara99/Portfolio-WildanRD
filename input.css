@@ -28,6 +28,10 @@ html {
   background-color: #2a2a2a; /* Warna latar belakang untuk elemen dengan kelas bg-slate-100 */
 }
 
+.dark-mode .bg-white {
+  background-color: #121212; /* Warna latar belakang untuk elemen dengan kelas bg-slate-100 */
+}
+
 .dark-mode .bg-slate-300 {
   background-color: #3a3a3a; /* Warna latar belakang untuk elemen dengan kelas bg-slate-300 */
 }
