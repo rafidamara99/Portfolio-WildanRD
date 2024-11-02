@@ -1357,6 +1357,18 @@ body.dark header.scrolled {
   --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity));
 }
 
+@media (min-width: 640px){
+  .sm\:hidden{
+    display: none;
+  }
+}
+
+@media (min-width: 768px){
+  .md\:hidden{
+    display: none;
+  }
+}
+
 @media (min-width: 1024px){
   .lg\:order-1{
     order: 1;

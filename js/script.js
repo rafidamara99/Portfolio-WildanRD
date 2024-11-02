@@ -35,7 +35,7 @@ document.addEventListener("click", (event) => {
 });
 
 // Event listener untuk menu links
-const menuLinks = menu.querySelectorAll("a");
+const menuLinks = mobileMenu.querySelectorAll("a");
 menuLinks.forEach((link) => {
   link.addEventListener("click", () => {
     mobileMenu.classList.add("hidden");
