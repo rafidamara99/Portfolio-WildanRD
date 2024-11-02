@@ -1,76 +1,143 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wildan-portfolio-TailwindCSS</title>
-  <link href="style.css" rel="stylesheet">
-
-  <!-- ~~~~~~~~~ CDNJS Font-Awesome ~~~~~~~~~ -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildan-Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- ~~~~~~~~~ Box Icon  ~~~~~~~~~ -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <!-- ~~~~~~~~~ CDNJS Font-Awesome ~~~~~~~~~ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
-<body class="bg-white text-text-color-black">
+<body class="font-Inter">
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Header Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<header class="w-full mx-auto fixed top-0 py-3 z-50">
+    <div class="container">
+        <div class="flex items-center justify-between">
+            <div class="logo">
+                <a href="#" class="text-3xl font-extrabold bg-gradient-to-r from-teal-400 to to-blue-500 hover:bg-gradient-to-r hover:from-teal-600 hover:to-blue-700 bg-clip-text text-transparent hover:opacity-90">
+                    Wildan.
+                </a>
+            </div>
 
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Header Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<header class="w-full sticky top-0 bg-white z-50 shadow-sm rounded-br-3xl rounded-bl-3xl">
-    <nav class="container flex justify-between items-center">
-        <div class="py-3 text-primary text-3xl font-Poppins font-extrabold hover:opacity-80">
-            <a href="#home">Wil<span class="text-text-color-black">dan</span><span class="text-primary">.</span></a>
-        </div>
+            <div class="nav-link hidden lg:flex">
+                <ul class="flex items-center space-x-8">
+                    <li>
+                        <a href="#home" class="font-semibold text-slate-600 link-hover">
+                            <i class="fa-solid fa-house-chimney text-xl"></i>
+                            <span></span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#about" class="font-semibold text-slate-600 link-hover">
+                            <!-- <i class="fa-solid fa-home"></i> -->
+                            <span>About</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#skills" class="font-semibold text-slate-600 link-hover">
+                            <!-- <i class="fa-solid fa-home"></i> -->
+                            <span>Skills</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#project" class="font-semibold text-slate-600 link-hover">
+                            <!-- <i class="fa-solid fa-home"></i> -->
+                            <span>Project</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#contact" class="font-semibold text-slate-600 link-hover">
+                            <!-- <i class="fa-solid fa-home"></i> -->
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
-        <div>
-            <ul class="hidden lg:flex font-semibold gap-6">
-                <li><a href="#home" class="hover:text-primary hover:underline underline-offset-8 decoration-2 duration-200 ease-in-out">Home</a></li>
-                <li><a href="#about" class="hover:text-primary hover:underline underline-offset-8 decoration-2 duration-200 ease-in-out">About</a></li>
-                <li><a href="#skills" class="hover:text-primary hover:underline underline-offset-8 decoration-2 duration-200 ease-in-out">Skills</a></li>
-                <li><a href="#project" class="hover:text-primary hover:underline underline-offset-8 decoration-2 duration-200 ease-in-out">Project</a></li>
-                <li><a href="#contact" class="hover:text-primary hover:underline underline-offset-8 decoration-2 duration-200 ease-in-out">Contact</a></li>
-                <!-- Toggle Dark Mode -->
-                <div id="dark-mode-toggle" class="cursor-pointer text-yellow-400 items-center text-xl">
-                    <i id="toggle-icon" class="fa-solid fa-sun"></i>
+            <div class="flex space-x-5 z-50">
+                <!-- Dark mode toggle -->
+                <div id="dark-toggle" class="cursor-pointer items-center text-2xl">
+                    <i id="toggle-icon" class="bx bx-sun"></i>
                 </div>
-            </ul>
-        </div>
-        
-        <!-- Mobile screen -->
-        <div class="flex gap-4 z-50 items-center lg:hidden">
-             <!-- Toggle Dark Mode -->
-             <div id="dark-mode-mobile" class="cursor-pointer text-yellow-400 items-center text-xl">
-                 <i id="toggle-icon-mobile" class="fa-solid fa-sun"></i>
-             </div>
-             <div id="hamburger" class="cursor-pointer text-2xl">
-                 <i id="toggle-hamburger" class="fa-solid fa-bars"></i>
-             </div>
-         </div>
+    
+                <!-- Mobile Screen -->
+                <div id="hamburger" class="lg:hidden text-2xl z-50 cursor-pointer">
+                    <i id="toggle-hamburger" class="fa-solid fa-bars"></i>
+                </div>
 
-        <div id="menu" class="hidden bg-white shadow-md rounded-br-3xl rounded-bl-3xl h-[60vh] absolute inset-0">
-            <ul class="h-full flex flex-col items-center justify-center gap-8 py-20 font-semibold">
-                <li><a href="#home" class="hover:text-primary hover:underline underline-offset-8 decoration-2 duration-200 ease-in-out">Home</a></li>
-                <li><a href="#about" class="hover:text-primary hover:underline underline-offset-8 decoration-2 duration-200 ease-in-out">About</a></li>
-                <li><a href="#skills" class="hover:text-primary hover:underline underline-offset-8 decoration-2 duration-200 ease-in-out">Skills</a></li>
-                <li><a href="#project" class="hover:text-primary hover:underline underline-offset-8 decoration-2 duration-200 ease-in-out">Project</a></li>
-                <li><a href="#contact" class="hover:text-primary hover:underline underline-offset-8 decoration-2 duration-200 ease-in-out">Contact</a></li>
-            </ul>
-        </div>
+            </div>
 
-    </nav>
+            <div id="mobile-menu" class="hidden bg-white shadow-md rounded-br-3xl rounded-bl-3xl h-[60vh] absolute inset-0">
+                <ul class="flex flex-col items-center justify-center gap-8 py-20">
+                    <li>
+                        <a href="#home" class="font-semibold text-slate-600 link-hover">
+                            <i class="fa-solid fa-house-chimney text-xl"></i>
+                            <span></span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#about" class="font-semibold text-slate-600 link-hover">
+                            <!-- <i class="fa-solid fa-home"></i> -->
+                            <span>About</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#skills" class="font-semibold text-slate-600 link-hover">
+                            <!-- <i class="fa-solid fa-home"></i> -->
+                            <span>Skills</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#project" class="font-semibold text-slate-600 link-hover">
+                            <!-- <i class="fa-solid fa-home"></i> -->
+                            <span>Project</span>
+                        </a>
+                    </li> 
+                    
+                    <li>
+                        <a href="#contact" class="font-semibold text-slate-600 link-hover">
+                            <!-- <i class="fa-solid fa-home"></i> -->
+                            <span>Contact</span>
+                        </a>
+                    </li> 
+                </ul>
+            </div>
+        </div>
+    </div>
 </header>
 
 
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Hero Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<section id="home" class="relative">
-    <div class="container py-24 lg:py-32">
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Home Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<section id="home" class="relative w-full bg-cover bg-center bg-no-repeat bg-fixed h-[100vh]">
+    <div class="container pt-36 pb-36 lg:pt-48">
         <div class="flex flex-col items-center justify-center lg:flex-row">
             <div class="order-2 lg:order-1 text-center lg:w-1/2 lg:text-left lg:pr-10">
-                <h2 class="text-text-color-LM text-base font-semibold mb-2 lg:mb-2 leading-relaxed lg:text-xl">Hallo semuanya 👋, saya</h2>
-                <h1 class="text-3xl lg:text-4xl font-bold font-Poppins mb-3 lg:mb-3 leading-snug">Wildan <span class="text-primary">Rafieu Damara</span></h1>
-                <p class="text-base mb-5 lg:mb-6 lg:pr-12 leading-relaxed text-text-color-LM">
+                <h2 class="text-slate-600 text-base font-semibold mb-2 lg:mb-2 leading-relaxed lg:text-xl">
+                    Hallo semuanya 👋, saya
+                </h2>
+
+                <h1 class="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-teal-400 to to-blue-500 bg-clip-text text-transparent hover:opacity-90 mb-3 lg:mb-3 leading-snug">
+                    Wildan Rafieu Damara
+                </h1>
+
+                <p class="text-base mb-5 lg:mb-6 lg:pr-12 leading-relaxed text-slate-600">
                     Tidur itu enak dan coding itu belajar — jadi saya lakukan keduanya dengan penuh harapan, sambil mencari jawaban atas bug yang <span class="font-bold">mengganggu!</span>
                 </p>
                 
                 <div class="flex flex-col lg:flex-row items-center lg:items-start mt-4 lg:mt-0">
-                    <button class="rounded-full cursor-pointer px-6 py-3 font-semibold border border-text-color-LM text-text-color-LM hover:border-transparent hover:bg-gradient-to-r from-teal-400 to-blue-500 hover:text-white duration-200 ease-in-out">
+                    <button class="rounded-full cursor-pointer px-6 py-3 font-semibold bg-gradient-to-r from-teal-300 to-blue-400 hover:bg-gradient-to-r hover:from-teal-400 hover:to-blue-500 text-white transition duration-300 ease-in-out">
                         <a href="resume.pdf" target="_blank">Download CV</a>
                         <span><i class="fa-solid fa-download"></i></span>
                     </button>
@@ -84,43 +151,59 @@
     </div>
 </section>
 
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ About Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<section id="about" class="py-24">
+
+<style>
+    #home {
+        background-image: url('img/bg-home.jpg');
+    }
+
+    body.dark #home {
+        background-image: url('img/bg-home-dark.jpeg'); /* Gambar untuk mode gelap */
+    }
+</style>
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ About Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<section id="about" class="py-36 dark:bg-black">
     <div class="container">
-        <h3 class="text-center justify-center text-3xl text-primary font-bold mb-12 lg:mb-24">About Me!</h3>
+        <h3 class="text-center justify-center text-2xl font-bold bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent mb-12 lg:mb-24">
+            About Me!
+        </h3>
         <div class="flex flex-wrap">
             <div class="w-full px-4 mb-10 lg:w-2/3">
-                <div class="bg-slate-300 bg-opacity-20 rounded-lg p-6 shadow-md flex-1">
-                    <p class="font-medium text-base text-text-color-LM max-w-xl">
-                        Halo 👋, saya <span class="font-bold">Wildan Rafieu Damara</span>! Saat ini, saya sedang belajar dan berjuang keras di dunia coding.
-                        <br><br>Coding ternyata tidak semudah tidur 🤦‍♂️ bahkan tidur pun terkadang menjadi sulit karena memikirkan bug-bug yang belum teratasi. Jadi, jika Anda punya tips, trik, atau hanya ingin berbagi momen kesulitan, saya sangat terbuka! Mari kita hadapi tantangan ini bersama. Kita tidak mau menyerah hanya karena satu <span class="line-through">ribu</span> error, kan?
-                        <br><br>Siap berkolaborasi dan tertawa di tengah perjuangan ini!
+                <div class="bg-slate-100 bg-opacity-70 rounded-3xl p-6 shadow-md flex-1">
+                    <p class="font-medium text-base text-slate-600 leading-relaxed">
+                        Halo semuanya 👋! Nama saya <span class="font-bold">Wildan Rafieu Damara</span>. Saya bukan karakter dari film aksi yang menyelamatkan dunia—meskipun saya serius dalam pekerjaan saya!
+                        <br>Saat ini, saya sedang terjun ke dunia pemrograman, berusaha memahami alur-alur kode yang menantang. Selain itu, saya selalu siap untuk belajar hal baru.
+                        <br>Jadi, jika Anda punya tips, trik, atau hanya ingin berbagi momen kesulitan, saya sangat terbuka! Mari kita hadapi tantangan ini bersama.
+                        <br>Kita tidak mau menyerah hanya karena satu <span class="line-through">ribu</span> error, kan?
+                        <br>Siap berkolaborasi dan tertawa di tengah perjuangan ini!
                     </p>
                 </div>
             </div>
 
             <div class="w-full px-4 lg:w-1/3">
-                <h3 class="font-semibold text-text-color-black text-2xl mb-4">Mari Berteman</h3>
-                <p class="font-medium text-base text-text-color-LM mb-6">
+                <h3 class="font-semibold bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent text-2xl mb-4">Mari Berteman</h3>
+                <p class="font-medium text-base text-slate-600 mb-6">
                 Mari berteman dan kita buat perjalanan ini menjadi lebih seru!
                 <br><br>Kunjungi saya dengan cara <span class="font-bold">klik</span> icon media sosial di bawah ini :
                 </p>
                 <!-- Icon Media Sosial -->
                  <div class="flex items-center gap-3">
                     <!-- Github -->
-                     <a href="https://github.com/rafidamara99" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center border border-text-color-LM text-text-color-LM hover:border-none hover:bg-gradient-to-r from-teal-400 to-blue-500 hover:text-white duration-200 ease-in-out">
+                     <a href="https://github.com/rafidamara99" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-500 text-slate-500 hover:border-none hover:bg-gradient-to-r from-teal-300 to-blue-400 hover:text-white transition duration-300 ease-in-out">
                         <i class="fa-brands fa-github text-2xl"></i>
                     </a>
                     <!-- Instagram -->
-                     <a href="https://instagram.com/rafidamara99" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center border border-text-color-LM text-text-color-LM hover:border-none hover:bg-gradient-to-r from-teal-400 to-blue-500 hover:text-white duration-200 ease-in-out">
+                     <a href="https://instagram.com/rafidamara99" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-500 text-slate-500 hover:border-none hover:bg-gradient-to-r from-teal-300 to-blue-400 hover:text-white transition duration-300 ease-in-out">
                         <i class="fa-brands fa-instagram text-2xl"></i>
                     </a>
                     <!-- Twitter / x -->
-                     <a href="https://x.com/rafi_damara" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center border border-text-color-LM text-text-color-LM hover:border-none hover:bg-gradient-to-r from-teal-400 to-blue-500 hover:text-white duration-200 ease-in-out">
+                     <a href="https://x.com/rafi_damara" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-500 text-slate-500 hover:border-none hover:bg-gradient-to-r from-teal-300 to-blue-400 hover:text-white transition duration-300 ease-in-out">
                         <i class="fa-brands fa-x-twitter text-2xl"></i>
                     </a>
                     <!-- LinkedIn -->
-                     <a href="https://www.linkedin.com/in/wildan-rafi-damara-888294174/" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center border border-text-color-LM text-text-color-LM hover:border-none hover:bg-gradient-to-r from-teal-400 to-blue-500 hover:text-white duration-200 ease-in-out">
+                     <a href="https://www.linkedin.com/in/wildan-rafi-damara-888294174/" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-500 text-slate-500 hover:border-none hover:bg-gradient-to-r from-teal-300 to-blue-400 hover:text-white transition duration-300 ease-in-out">
                         <i class="fa-brands fa-linkedin text-2xl"></i>
                     </a>
                  </div>
@@ -129,42 +212,45 @@
     </div>
 </section>
 
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Skills Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Skills Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 <section id="skills" class="py-24 bg-slate-100">
     <div class="container">
-        <h3 class="text-center justify-center text-3xl text-primary font-bold mb-12">Skills</h3>
+        <h3 class="text-center justify-center text-2xl bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent font-bold mb-12">Skills</h3>
         <div class="flex flex-wrap justify-center">
             <!-- Skill 1: HTML -->
             <div class="w-full px-4 lg:w-1/3 mb-8">
-                <div class="bg-slate-300 bg-opacity-25 rounded-lg p-6 shadow-lg text-center">
+                <div class="bg-white rounded-lg py-6 px-4 shadow-lg text-center filter grayscale hover:scale-105 hover:grayscale-0">
                     <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="transition duration-300 ease-in-out">
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML Logo" class="w-16 h-16 mx-auto mb-2 filter grayscale hover:scale-105 hover:grayscale-0">
-                        <h4 class="font-bold text-xl text-text-color-black mb-2 hover:text-red-600">HTML</h4>
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML Logo" class="w-16 h-16 mx-auto mb-2">
+                        <h4 class="font-bold text-xl text-slate-600 mb-2 hover:text-orange-600">HTML</h4>
                     </a>
-                    <p class="font-medium text-base text-text-color-LM mb-2">Beginner</p>
-                    <p class="text-sm text-text-color-black font-semibold">Markup language for creating web pages.</p>
+                    <p class="font-medium text-base text-slate-400 mb-2">Beginner</p>
+                    <p class="text-sm text-slate-600 font-semibold">Markup language for creating web pages.</p>
                 </div>
             </div>
             <!-- Skill 2: CSS -->
             <div class="w-full px-4 lg:w-1/3 mb-8">
-                <div class="bg-slate-300 bg-opacity-25 rounded-lg p-6 shadow-lg text-center">
+                <div class="bg-white rounded-lg py-6 px-4 shadow-lg text-center filter grayscale hover:scale-105 hover:grayscale-0">
                     <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="transition duration-300 ease-in-out">
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS Logo" class="w-16 h-16 mx-auto mb-2 filter grayscale hover:scale-105 hover:grayscale-0">
-                        <h4 class="font-bold text-xl text-text-color-black mb-2 hover:text-blue-600">CSS</h4>
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS Logo" class="w-16 h-16 mx-auto mb-2">
+                        <h4 class="font-bold text-xl text-slate-600 mb-2 hover:text-blue-600">CSS</h4>
                     </a>
-                    <p class="font-medium text-base text-text-color-LM mb-2">Beginner</p>
-                    <p class="text-sm text-text-color-black font-semibold">Style sheet language for designing web pages.</p>
+                    <p class="font-medium text-base text-slate-400 mb-2">Beginner</p>
+                    <p class="text-sm text-slate-600 font-semibold">Style sheet language for designing web pages.</p>
                 </div>
             </div>
             <!-- Skill 3: JavaScript -->
             <div class="w-full px-4 lg:w-1/3 mb-8">
-                <div class="bg-slate-300 bg-opacity-25 rounded-lg p-6 shadow-lg text-center">
+                <div class="bg-white rounded-lg py-6 px-4 shadow-lg text-center filter grayscale hover:scale-105 hover:grayscale-0">
                     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="transition duration-300 ease-in-out">
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript Logo" class="w-16 h-16 mx-auto mb-2 filter grayscale hover:scale-105 hover:grayscale-0">
-                        <h4 class="font-bold text-xl text-text-color-black mb-2 hover:text-yellow-600">JavaScript</h4>
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript Logo" class="w-16 h-16 mx-auto mb-2">
+                        <h4 class="font-bold text-xl text-slate-600 mb-2 hover:text-yellow-600">JavaScript</h4>
                     </a>
-                    <p class="font-medium text-base text-text-color-LM mb-2">Beginner</p>
-                    <p class="text-sm text-text-color-black font-semibold">Programming language for web development.</p>
+                    <p class="font-medium text-base text-slate-400 mb-2">Beginner</p>
+                    <p class="text-sm text-slate-600 font-semibold">Programming language for web development.</p>
                 </div>
             </div>
         </div>
@@ -173,27 +259,28 @@
 
 
 
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Portfilio Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Project Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 <section id="project" class="py-24">
     <div class="container">
         <div class="w-full px-auto">
             <div class="max-w-xl mx-auto text-center mb-12">
-                <h4 class="font-bold text-lg text-primary mb-3">Portfolio</h4>
+                <h4 class="font-bold text-lg bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent mb-3">Portfolio</h4>
                 <h2 class="font-bold text-3xl mb-3">Project Terbaru</h2>
-                <p class="font-medium text-md text-text-color-LM">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur pariatur velit consectetur est veniam delectus nulla atque dolorem sequi quisquam.</p>
+                <p class="font-medium text-md text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur pariatur velit consectetur est veniam delectus nulla atque dolorem sequi quisquam.</p>
             </div>
         </div>
         <!-- Project 1 -->
         <div class="w-full px4 flex flex-wrap">
             <div class="w-full px-4 lg:w-1/3">
-                <div class="bg-slate-100 rounded-xl shadow-lg overflow-hidden mb-12">
+                <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden mb-12">
                     <img src="img/Project1.png" alt="Project Portfolio">
                     <div class="py-8 px-6">
                         <h3>
-                            <a href="#" target="_blank" class="block mb-3 font-bold text-xl text-text-color-black hover:text-primary">Web Portfolio Wildan R.D</a>
+                            <a href="#" target="_blank" class="block mb-3 font-bold text-xl hover:text-blue-500 hover:underline underline-offset-4 transition duration-300 ease-in-out">Web Portfolio Wildan R.D</a>
                         </h3>
-                        <p class="font-medium text-base text-text-color-LM mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit molestiae mollitia alias.</p>
-                        <button class="rounded-full cursor-pointer px-4 py-2 font-semibold border border-text-color-LM text-text-color-LM hover:border-transparent hover:bg-gradient-to-r from-teal-400 to-blue-500 hover:text-white duration-200 ease-in-out">
+                        <p class="font-medium text-base text-slate-600 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit molestiae mollitia alias.</p>
+                        <button class="rounded-full cursor-pointer px-4 py-2 font-semibold bg-gradient-to-r from-teal-300 to-blue-400 hover:bg-gradient-to-r hover:from-teal-400 hover:to-blue-500 text-white transition duration-300 ease-in-out">
                             <a href="resume.pdf" target="_blank">View Project</a>
                             <span><i class="fa-solid fa-link"></i></span>
                         </button>
@@ -202,14 +289,14 @@
             </div>
             <!-- Project 2 -->
             <div class="w-full px-4 lg:w-1/3">
-                <div class="bg-slate-100 rounded-xl shadow-lg overflow-hidden mb-12">
+                <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden mb-12">
                     <img src="img/Project1.png" alt="Project Portfolio">
                     <div class="py-8 px-6">
                         <h3>
-                            <a href="#" target="_blank" class="block mb-3 font-bold text-xl text-text-color-black hover:text-primary">Web Portfolio Wildan R.D</a>
+                            <a href="#" target="_blank" class="block mb-3 font-bold text-xl hover:text-blue-500 hover:underline underline-offset-4 transition duration-300 ease-in-out">Web Portfolio Wildan R.D</a>
                         </h3>
-                        <p class="font-medium text-base text-text-color-LM mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit molestiae mollitia alias.</p>
-                        <button class="rounded-full cursor-pointer px-4 py-2 font-semibold border border-text-color-LM text-text-color-LM hover:border-transparent hover:bg-gradient-to-r from-teal-400 to-blue-500 hover:text-white duration-200 ease-in-out">
+                        <p class="font-medium text-base text-slate-600 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit molestiae mollitia alias.</p>
+                        <button class="rounded-full cursor-pointer px-4 py-2 font-semibold bg-gradient-to-r from-teal-300 to-blue-400 hover:bg-gradient-to-r hover:from-teal-400 hover:to-blue-500 text-white transition duration-300 ease-in-out">
                             <a href="resume.pdf" target="_blank">View Project</a>
                             <span><i class="fa-solid fa-link"></i></span>
                         </button>
@@ -218,14 +305,14 @@
             </div>
             <!-- Project 3 -->
             <div class="w-full px-4 lg:w-1/3">
-                <div class="bg-slate-100 rounded-xl shadow-lg overflow-hidden mb-12">
+                <div class="bg-gray-100 rounded-xl shadow-lg overflow-hidden mb-12">
                     <img src="img/Project1.png" alt="Project Portfolio">
                     <div class="py-8 px-6">
                         <h3>
-                            <a href="#" target="_blank" class="block mb-3 font-bold text-xl text-text-color-black hover:text-primary">Web Portfolio Wildan R.D</a>
+                            <a href="#" target="_blank" class="block mb-3 font-bold text-xl hover:text-blue-500 hover:underline underline-offset-4 transition duration-300 ease-in-out">Web Portfolio Wildan R.D</a>
                         </h3>
-                        <p class="font-medium text-base text-text-color-LM mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit molestiae mollitia alias.</p>
-                        <button class="rounded-full cursor-pointer px-4 py-2 font-semibold border border-text-color-LM text-text-color-LM hover:border-transparent hover:bg-gradient-to-r from-teal-400 to-blue-500 hover:text-white duration-200 ease-in-out">
+                        <p class="font-medium text-base text-slate-600 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit molestiae mollitia alias.</p>
+                        <button class="rounded-full cursor-pointer px-4 py-2 font-semibold bg-gradient-to-r from-teal-300 to-blue-400 hover:bg-gradient-to-r hover:from-teal-400 hover:to-blue-500 text-white transition duration-300 ease-in-out">
                             <a href="resume.pdf" target="_blank">View Project</a>
                             <span><i class="fa-solid fa-link"></i></span>
                         </button>
@@ -236,39 +323,53 @@
     </div>
 </section>
 
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Contact Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Contact Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 <section id="contact" class="py-24 bg-slate-100">
     <div class="container">
         <div class="w-full px-auto">
             <div class="max-w-xl mx-auto text-center mb-12">
-                <h4 class="font-semibold text-lg text-primary mb-3">Contact</h4>
+                <h4 class="font-bold text-lg bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent mb-3">Contact</h4>
                 <h2 class="font-bold text-3xl mb-3">Hubungi Saya</h2>
-                <p class="font-medium text-md text-text-color-LM">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur pariatur velit consectetur est veniam delectus nulla atque dolorem sequi quisquam.</p>
+                <p class="font-normal text-base text-slate-600">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur pariatur velit consectetur est veniam delectus nulla atque dolorem sequi quisquam.
+                </p>
             </div>
         </div>
-            <div class="w-full px-4 lg:px-20 mb-8 justify-center">
-                <form id="contact-form" action="https://formspree.io/f/mldrzyld" method="POST" class="bg-white p-6 rounded-lg shadow-lg border border-gray-300">
+
+        <div class="w-full flex flex-wrap">
+            <!-- Form Kontak -->
+            <div class="w-full px-4 lg:w-1/2 mb-8 justify-center">
+                <form id="contact-form" action="https://formspree.io/f/mldrzyld" method="POST" class="bg-white p-6 rounded-3xl shadow-lg border border-gray-300">
                     <div class="mb-4">
-                        <label for="name" class="block text-blue-700 font-semibold mb-2">Nama</label>
+                        <label for="name" class="block text-blue-400 font-semibold mb-2">Nama</label>
                         <input type="text" id="name" name="name" class="w-full px-3 py-2 bg-slate-300 bg-opacity-20 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" required>
                     </div>
                     <div class="mb-4">
-                        <label for="email" class="block text-blue-700 font-semibold mb-2">Email</label>
+                        <label for="email" class="block text-blue-400 font-semibold mb-2">Email</label>
                         <input type="email" id="email" name="email" class="w-full px-3 py-2 bg-slate-300 bg-opacity-20 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" required>
                     </div>
                     <div class="mb-4">
-                        <label for="message" class="block text-blue-700 font-semibold mb-2">Pesan</label>
+                        <label for="message" class="block text-blue-400 font-semibold mb-2">Pesan</label>
                         <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 bg-slate-300 bg-opacity-20 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" required></textarea>
                     </div>
-                    <button type="submit" class="rounded-full cursor-pointer px-6 py-3 font-semibold border border-primary text-primary hover:border-transparent hover:bg-gradient-to-r from-teal-400 to-blue-500 hover:text-white duration-200 ease-in-out">Kirim Pesan <span><i class="fa-solid fa-mail-bulk"></i></span></button>
+                    <button type="submit" class="rounded-full cursor-pointer px-6 py-3 font-semibold bg-gradient-to-r from-teal-300 to-blue-400 hover:bg-gradient-to-r hover:from-teal-400 hover:to-blue-500 text-white transition duration-300 ease-in-out">Kirim Pesan <span><i class="fa-solid fa-mail-bulk"></i></span></button>
                 </form>
-            </div> 
+            </div>
+
+            <!-- Peta -->
+            <div class="w-full h-auto px-4 lg:w-1/2 lg:mt-1">
+                <iframe class="w-full h-96 rounded-3xl"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.881326926901!2d106.82127197437535!3d-6.146637393840358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5e38132dd3f%3A0xb864595c1be4b45d!2sLokasari%20Square!5e0!3m2!1sen!2sau!4v1730181908400!5m2!1sen!2sau">
+            </iframe>
+            </div>
         </div>
     </div>
-</section>
+</section>    
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Footer Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<footer class="bg-gray-800 text-slate-300 py-10">
+<footer class="bg-slate-950 text-slate-50 py-10">
     <div class="container mx-auto flex flex-col items-center">
         <h3 class="text-2xl font-bold mb-4">Terhubung dengan Saya</h3>
         <p class="text-center mb-6">Jika Anda memiliki pertanyaan atau ingin berkolaborasi, jangan ragu untuk menghubungi saya!</p>
@@ -276,38 +377,63 @@
         <!-- Icon Media Sosial -->
         <div class="flex items-center gap-3 mb-5">
             <!-- Github -->
-             <a href="https://github.com/rafidamara99" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center border border-text-color-LM text-text-color-LM hover:border-none hover:bg-gradient-to-r from-teal-400 to-blue-500 hover:text-white duration-200 ease-in-out">
+            <a href="https://github.com/rafidamara99" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-500 text-slate-500 hover:border-none hover:bg-gradient-to-r from-teal-300 to-blue-400 hover:text-white transition duration-300 ease-in-out">
                 <i class="fa-brands fa-github text-2xl"></i>
             </a>
             <!-- Instagram -->
-             <a href="https://instagram.com/rafidamara99" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center border border-text-color-LM text-text-color-LM hover:border-none hover:bg-gradient-to-r from-teal-400 to-blue-500 hover:text-white duration-200 ease-in-out">
+             <a href="https://instagram.com/rafidamara99" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-500 text-slate-500 hover:border-none hover:bg-gradient-to-r from-teal-300 to-blue-400 hover:text-white transition duration-300 ease-in-out">
                 <i class="fa-brands fa-instagram text-2xl"></i>
             </a>
             <!-- Twitter / x -->
-             <a href="https://x.com/rafi_damara" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center border border-text-color-LM text-text-color-LM hover:border-none hover:bg-gradient-to-r from-teal-400 to-blue-500 hover:text-white duration-200 ease-in-out">
+             <a href="https://x.com/rafi_damara" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-500 text-slate-500 hover:border-none hover:bg-gradient-to-r from-teal-300 to-blue-400 hover:text-white transition duration-300 ease-in-out">
                 <i class="fa-brands fa-x-twitter text-2xl"></i>
             </a>
             <!-- LinkedIn -->
-             <a href="https://www.linkedin.com/in/wildan-rafi-damara-888294174/" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center border border-text-color-LM text-text-color-LM hover:border-none hover:bg-gradient-to-r from-teal-400 to-blue-500 hover:text-white duration-200 ease-in-out">
+             <a href="https://www.linkedin.com/in/wildan-rafi-damara-888294174/" target="_blank" class="w-9 h-9 rounded-full flex justify-center items-center border border-slate-500 text-slate-500 hover:border-none hover:bg-gradient-to-r from-teal-300 to-blue-400 hover:text-white transition duration-300 ease-in-out">
                 <i class="fa-brands fa-linkedin text-2xl"></i>
             </a>
         </div>
 
         <div class="text-center">
-            <p class="text-sm">Designed with 💗 by <span class="text-primary font-bold text-base">Wildan Rafieu Damara</span>.</p>
+            <p class="text-sm">Designed with 💗 by <span class="bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent font-bold text-base">Wildan Rafieu Damara</span>.</p>
         </div>
     </div>
 </footer>
 
 
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Back to Top Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<button id="back-to-top" class="fixed bottom-8 right-8 rounded-full cursor-pointer px-5 py-3 font-semibold border border-text-color-LM text-text-color-LM hover:border-transparent hover:bg-gradient-to-r from-teal-400 to-blue-500 hover:text-white duration-200 ease-in-out">
+<button id="back-to-top" class="fixed bottom-8 right-8 rounded-full cursor-pointer px-5 py-3 font-semibold bg-gradient-to-r from-teal-400 to-blue-500 text-white duration-200 ease-in-out">
     <i class="fa-solid fa-arrow-up"></i>
 </button>
 
 
-<!-- Script JS -->
- <script src="script.js"></script>
+    <!-- script.js -->
+    <script src="js/script.js"></script>
+    <!-- script Dark Mode -->
+    <script src="js/dark-mode.js"></script>
+    <!-- contact js -->
+     <script src="js/contact.js"></script>
+    <!-- Script Box Icon -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- back to top script -->
+    <script>
+        // Menangani scroll untuk menampilkan atau menyembunyikan tombol "Back to Top"
+        window.addEventListener('scroll', function() {
+            const backToTopButton = document.getElementById('back-to-top');
+            if (window.scrollY > 200) { // Tampilkan tombol jika scroll lebih dari 200px
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        // Menangani klik pada tombol "Back to Top"
+        document.getElementById('back-to-top').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Scroll ke atas dengan efek halus
+            });
+        });
+    </script>
 </body>
 </html>

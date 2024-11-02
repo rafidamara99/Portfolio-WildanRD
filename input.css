@@ -1,54 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500;600;700&family=Protest+Guerrilla&family=Roboto:wght@400;500;700&family=Sacramento&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Smooth scroll HTML */
-
 html {
     scroll-behavior: smooth;
-  }
-
-/* Gaya untuk mode gelap */
-.dark-mode {
-  background-color: #121212; /* Warna latar belakang gelap */
-  color: #ffffff; /* Warna teks terang */
 }
 
-.dark-mode header {
-  background-color: #1e1e1e; /* Warna latar belakang header */
+/* navbar blur on scroll */
+header {
+    background-color: transparent; /* Navbar transparan */
+    transition: background-color 0.3s ease; /* Transisi halus saat mengganti warna */
 }
 
-.dark-mode  #menu {
-  background-color: #1e1e1e; /* Warna latar belakang header */
+header.scrolled {
+    background-color: rgba(255, 255, 255, 0.8); /* Warna latar belakang dengan transparansi */
+    backdrop-filter: blur(5px); /* Efek blur */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Tambahkan efek bayangan */
 }
 
-.dark-mode .bg-slate-100 {
-  background-color: #2a2a2a; /* Warna latar belakang untuk elemen dengan kelas bg-slate-100 */
+.link-hover {
+    @apply hover:underline hover:underline-offset-8 decoration-2 hover:bg-gradient-to-r from-teal-500 to-blue-600 hover:bg-clip-text hover:text-transparent transition duration-300 ease-in-out;
 }
 
-.dark-mode .bg-white {
-  background-color: #121212; /* Warna latar belakang untuk elemen dengan kelas bg-slate-100 */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Dark Mode ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+body.dark {
+    background-color: #1a1a1a; /* Warna latar belakang gelap */
+    color: #f0f0f0; /* Warna teks terang */
 }
 
-.dark-mode .bg-slate-300 {
-  background-color: #3a3a3a; /* Warna latar belakang untuk elemen dengan kelas bg-slate-300 */
+body.dark .link-hover {
+    @apply hover:underline hover:underline-offset-8 decoration-2 hover:bg-gradient-to-r from-teal-500 to-blue-600 hover:bg-clip-text hover:text-transparent transition duration-300 ease-in-out;
 }
 
-.dark-mode .text-text-color-LM {
-  color: #b0b0b0; /* Warna teks untuk elemen dengan kelas text-text-color-LM */
+body.dark .bg-slate-100 {
+    background-color: #2a2a2a; /* Warna latar belakang untuk elemen tertentu */
 }
 
-.dark-mode .text-text-color-black {
-  color: #ffff; /* Warna teks untuk elemen dengan kelas text-text-color-LM */
+body.dark .bg-white {
+    background-color: #1a1a1a; /* Warna latar belakang untuk elemen tertentu */
 }
 
-.dark-mode code {
-  background-color: #2e2e2e; /* Warna latar belakang untuk elemen kode */
-  color: #f8f8f2; /* Warna teks untuk elemen kode */
+body.dark .bg-gray-100 {
+    background-color: #3a3a3a; /* Warna latar belakang untuk elemen tertentu */
 }
 
-.fa-moon {
-  color: #ffff;
+body.dark .text-slate-600 {
+    color: #e0e0e0; /* Warna teks untuk elemen tertentu */
+}
+
+body.dark header.scrolled {
+    background-color: rgba(0, 0, 0, 0.6); /* Warna latar belakang dengan transparansi */
+    backdrop-filter: blur(10px); /* Efek blur */
+    box-shadow: 0 4px 10px rgba(74, 74, 74, 0.1); /* Tambahkan efek bayangan */
+}
+
+
+
+
+/* back to top */
+#back-to-top {
+    display: none; /* Sembunyikan tombol secara default */
+    cursor: pointer; /* Ubah kursor saat hover */
+    z-index: 1000; /* Pastikan tombol di atas elemen lainnya */
 }
