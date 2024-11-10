@@ -24,6 +24,90 @@ header.scrolled {
     @apply hover:underline hover:underline-offset-8 decoration-2 hover:bg-gradient-to-r from-teal-500 to-blue-600 hover:bg-clip-text hover:text-transparent transition duration-300 ease-in-out;
 }
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Custom CSS for Wave Animation ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* Animasi Gelombang: Posisi dan ukuran untuk gelombang */
+.animated {
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+.animated-text {
+    animation: up-down 3s ease-in-out infinite alternate-reverse both;
+}
+
+.hero-waves {
+    display: block;
+    width: 100%; /* Lebar gelombang akan mengisi seluruh layar */
+    height: 60px; /* Tinggi gelombang */
+    position: absolute; /* Posisi absolute untuk menempatkannya di bawah konten */
+    bottom: 0; /* Memastikan gelombang berada di bagian bawah */
+}
+
+/* Animasi untuk wave1 */
+.wave1 use {
+    animation: move-forever1 10s linear infinite; /* Animasi gerak untuk wave1 */
+    animation-delay: -2s; /* Memberikan delay untuk animasi agar tidak mulai bersamaan */
+    fill: #a0d9d1; /* Warna gelombang pertama (Teal) */
+    opacity: 0.6; /* Membuat gelombang lebih transparan agar menyatu dengan latar belakang */
+}
+
+/* Animasi untuk wave2 */
+.wave2 use {
+    animation: move-forever2 8s linear infinite; /* Animasi gerak untuk wave2 */
+    animation-delay: -2s; /* Memberikan delay untuk animasi agar tidak mulai bersamaan */
+    fill: #c5e0e0; /* Warna gelombang kedua (Teal lebih gelap) */
+    opacity: 0.4; /* Gelombang lebih transparan */
+}
+
+/* Animasi untuk wave3 */
+.wave3 use {
+    animation: move-forever3 6s linear infinite; /* Animasi gerak untuk wave3 */
+    animation-delay: -2s; /* Memberikan delay untuk animasi agar tidak mulai bersamaan */
+    fill: #ffffff; /* Warna gelombang ketiga (Putih) */
+}
+
+    /* Keyframes untuk animasi wave1 */
+    @keyframes move-forever1 {
+        0% {
+            transform: translate(85px, 0%); /* Posisi awal gelombang pertama */
+        }
+        100% {
+            transform: translate(-90px, 0%); /* Posisi akhir gelombang pertama */
+        }
+    }
+
+    /* Keyframes untuk animasi wave2 */
+    @keyframes move-forever2 {
+        0% {
+            transform: translate(-90px, 0%); /* Posisi awal gelombang kedua */
+        }
+        100% {
+            transform: translate(85px, 0%); /* Posisi akhir gelombang kedua */
+        }
+    }
+
+    /* Keyframes untuk animasi wave3 */
+    @keyframes move-forever3 {
+        0% {
+            transform: translate(-90px, 0%); /* Posisi awal gelombang ketiga */
+        }
+        100% {
+            transform: translate(85px, 0%); /* Posisi akhir gelombang ketiga */
+        }
+    }
+
+    @keyframes up-down {
+        0% {
+            transform: translateY(10px);
+        }
+
+        100% {
+            transform: translateY(-10px);
+        }
+    }
+
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Dark Mode ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 body.dark {
@@ -57,7 +141,28 @@ body.dark header.scrolled {
     box-shadow: 0 4px 10px rgba(74, 74, 74, 0.1); /* Tambahkan efek bayangan */
 }
 
+/* Animasi untuk wave1 */
+body.dark .wave1 use {
+    animation: move-forever1 10s linear infinite; /* Animasi gerak untuk wave1 */
+    animation-delay: -2s; /* Memberikan delay untuk animasi agar tidak mulai bersamaan */
+    fill: #4e9a94; /* Warna gelombang pertama (Teal) */
+    opacity: 0.6; /* Membuat gelombang lebih transparan agar menyatu dengan latar belakang */
+}
 
+/* Animasi untuk wave2 */
+body.dark .wave2 use {
+    animation: move-forever2 8s linear infinite; /* Animasi gerak untuk wave2 */
+    animation-delay: -2s; /* Memberikan delay untuk animasi agar tidak mulai bersamaan */
+    fill: #607d8b; /* Warna gelombang kedua (Teal lebih gelap) */
+    opacity: 0.4; /* Gelombang lebih transparan */
+}
+
+/* Animasi untuk wave3 */
+body.dark .wave3 use {
+    animation: move-forever3 6s linear infinite; /* Animasi gerak untuk wave3 */
+    animation-delay: -2s; /* Memberikan delay untuk animasi agar tidak mulai bersamaan */
+    fill: #1a1a1a; /* Warna gelombang ketiga (Putih) */
+}
 
 
 /* back to top */
@@ -66,3 +171,8 @@ body.dark header.scrolled {
     cursor: pointer; /* Ubah kursor saat hover */
     z-index: 1000; /* Pastikan tombol di atas elemen lainnya */
 }
+
+
+
+
+
