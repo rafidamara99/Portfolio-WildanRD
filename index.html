@@ -14,17 +14,20 @@
 </head>
 <body class="font-Inter">
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Header Section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-<header class="w-full mx-auto fixed top-0 py-3 z-50">
+<header class="w-full mx-auto fixed top-0 py-3 z-50 bg-white shadow-md">
     <div class="container">
         <div class="flex items-center justify-between">
+            <!-- Logo bagian kiri -->
             <div class="logo">
-                <a href="#" class="text-3xl font-extrabold bg-gradient-to-r from-teal-400 to to-blue-500 hover:bg-gradient-to-r hover:from-teal-600 hover:to-blue-700 bg-clip-text text-transparent hover:opacity-90">
+                <a href="#" class="text-3xl font-extrabold bg-gradient-to-r from-teal-400 to-blue-500 hover:bg-gradient-to-r hover:from-teal-600 hover:to-blue-700 bg-clip-text text-transparent hover:opacity-90">
                     Wildan.
                 </a>
             </div>
 
+            <!-- Navigasi Menu untuk desktop -->
             <div class="nav-link hidden lg:flex">
                 <ul class="flex items-center space-x-8">
+                    <!-- Link menu Home -->
                     <li>
                         <a href="#home" class="font-semibold text-slate-600 link-hover">
                             <i class="fa-solid fa-house-chimney text-xl"></i>
@@ -32,36 +35,37 @@
                         </a>
                     </li>
                     
+                    <!-- Link menu About -->
                     <li>
                         <a href="#about" class="font-semibold text-slate-600 link-hover">
-                            <!-- <i class="fa-solid fa-home"></i> -->
                             <span>About</span>
                         </a>
                     </li>
                     
+                    <!-- Link menu Skills -->
                     <li>
                         <a href="#skills" class="font-semibold text-slate-600 link-hover">
-                            <!-- <i class="fa-solid fa-home"></i> -->
                             <span>Skills</span>
                         </a>
                     </li>
                     
+                    <!-- Link menu Project -->
                     <li>
                         <a href="#project" class="font-semibold text-slate-600 link-hover">
-                            <!-- <i class="fa-solid fa-home"></i> -->
                             <span>Project</span>
                         </a>
                     </li>
                     
+                    <!-- Link menu Contact -->
                     <li>
                         <a href="#contact" class="font-semibold text-slate-600 link-hover">
-                            <!-- <i class="fa-solid fa-home"></i> -->
                             <span>Contact</span>
                         </a>
                     </li>
                 </ul>
             </div>
 
+            <!-- Dark mode toggle dan mobile menu toggle -->
             <div class="flex space-x-5 z-50">
                 <!-- Dark mode toggle -->
                 <div id="dark-toggle" class="cursor-pointer items-center text-2xl">
@@ -72,11 +76,12 @@
                 <div id="hamburger" class="lg:hidden text-2xl z-50 cursor-pointer">
                     <i id="toggle-hamburger" class="fa-solid fa-bars"></i>
                 </div>
-
             </div>
 
+            <!-- Menu mobile yang tersembunyi -->
             <div id="mobile-menu" class="hidden bg-white shadow-md rounded-br-3xl rounded-bl-3xl h-[60vh] absolute inset-0">
                 <ul class="flex flex-col items-center justify-center gap-8 py-20">
+                    <!-- Link menu Home (mobile) -->
                     <li>
                         <a href="#home" class="font-semibold text-slate-600 link-hover">
                             <i class="fa-solid fa-house-chimney text-xl"></i>
@@ -84,30 +89,30 @@
                         </a>
                     </li>
                     
+                    <!-- Link menu About (mobile) -->
                     <li>
                         <a href="#about" class="font-semibold text-slate-600 link-hover">
-                            <!-- <i class="fa-solid fa-home"></i> -->
                             <span>About</span>
                         </a>
                     </li>
                     
+                    <!-- Link menu Skills (mobile) -->
                     <li>
                         <a href="#skills" class="font-semibold text-slate-600 link-hover">
-                            <!-- <i class="fa-solid fa-home"></i> -->
                             <span>Skills</span>
                         </a>
                     </li>
                     
+                    <!-- Link menu Project (mobile) -->
                     <li>
                         <a href="#project" class="font-semibold text-slate-600 link-hover">
-                            <!-- <i class="fa-solid fa-home"></i> -->
                             <span>Project</span>
                         </a>
                     </li> 
                     
+                    <!-- Link menu Contact (mobile) -->
                     <li>
                         <a href="#contact" class="font-semibold text-slate-600 link-hover">
-                            <!-- <i class="fa-solid fa-home"></i> -->
                             <span>Contact</span>
                         </a>
                     </li> 
@@ -116,7 +121,6 @@
         </div>
     </div>
 </header>
-
 
 
 
@@ -138,9 +142,11 @@
                 </p>
                 
                 <div class="flex flex-col lg:flex-row items-center lg:items-start mt-4 lg:mt-0">
-                    <button class="rounded-full cursor-pointer px-6 py-3 font-semibold bg-gradient-to-r from-teal-300 to-blue-400 hover:bg-gradient-to-r hover:from-teal-400 hover:to-blue-500 text-white transition duration-300 ease-in-out">
-                        <a href="resume.pdf" target="_blank">Download CV</a>
-                        <span><i class="fa-solid fa-download"></i></span>
+                    <!-- Button download dengan efek hover -->
+                    <button class="btn-download relative rounded-full cursor-pointer px-6 py-3 font-semibold text-slate-600 border border-slate-600 hover:border-transparent hover:text-white overflow-hidden">
+                        <!-- Link di dalam button -->
+                        <a href="resume.pdf" target="_blank" class="relative z-10">Download CV</a>
+                        <span class="relative z-10"><i class="fa-solid fa-download"></i></span>
                     </button>
                 </div>
             </div>

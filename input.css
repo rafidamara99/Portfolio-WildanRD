@@ -20,10 +20,53 @@ header.scrolled {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Tambahkan efek bayangan */
 }
 
+/* Efek Hover untuk Link dengan Underline Animasi */
 .link-hover {
-    @apply hover:underline hover:underline-offset-8 decoration-2 hover:bg-gradient-to-r from-teal-500 to-blue-600 hover:bg-clip-text hover:text-transparent transition duration-300 ease-in-out;
+    @apply decoration-2 hover:bg-gradient-to-r from-teal-500 to-blue-600 hover:bg-clip-text hover:text-transparent transition duration-300 ease-in-out;
+    position: relative; /* Agar pseudo-element dapat diposisikan dengan benar */
 }
 
+/* Pseudo-element untuk garis bawah animasi */
+.link-hover::after {
+    content: ''; /* Membuat elemen kosong untuk garis bawah */
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%; /* Garis bawah mulai dari lebar 0 */
+    height: 3px; /* Ketebalan garis bawah */
+    background-color: #14b8a6; /* Warna garis bawah, sesuai dengan warna teal */
+    transition: width 0.3s ease-in-out; /* Transisi untuk animasi lebar garis bawah */
+}
+
+/* Efek hover untuk memperluas garis bawah */
+.link-hover:hover::after {
+    width: 100%; /* Saat hover, garis bawah mengisi penuh dari kiri ke kanan */
+}
+
+
+/* Button dengan pseudo-element untuk animasi background */
+.btn-download::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Mulai posisi background dari luar button */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #4fd1c5, #63b3ed); /* Gradient dari teal ke biru */
+    transition: left 0.4s ease-in-out; /* Animasi pergerakan background */
+    z-index: 0;
+}
+
+/* Ketika button dihover, pergerakan background akan menuju ke dalam button */
+.btn-download:hover::before {
+    left: 0; /* Menampilkan gradient dengan pergerakan dari kiri ke kanan */
+}
+
+/* Menjaga teks tetap di atas background gradient */
+.btn-download a {
+    position: relative;
+    z-index: 10; /* Pastikan teks tetap terlihat di atas pseudo-element */
+}
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Custom CSS for Wave Animation ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 

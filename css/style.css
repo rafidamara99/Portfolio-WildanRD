@@ -628,6 +628,10 @@ video {
   top: 0px;
 }
 
+.z-10{
+  z-index: 10;
+}
+
 .z-50{
   z-index: 50;
 }
@@ -829,6 +833,11 @@ video {
 .border-slate-500{
   --tw-border-opacity: 1;
   border-color: rgb(100 116 139 / var(--tw-border-opacity));
+}
+
+.border-slate-600{
+  --tw-border-opacity: 1;
+  border-color: rgb(71 85 105 / var(--tw-border-opacity));
 }
 
 .bg-gray-100{
@@ -1179,6 +1188,8 @@ header.scrolled {
   /* Tambahkan efek bayangan */
 }
 
+/* Efek Hover untuk Link dengan Underline Animasi */
+
 .link-hover{
   --tw-gradient-from: #14b8a6 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(20 184 166 / 0) var(--tw-gradient-to-position);
@@ -1197,8 +1208,68 @@ header.scrolled {
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
-  text-decoration-line: underline;
-  text-underline-offset: 8px;
+}
+
+.link-hover {
+  position: relative;
+  /* Agar pseudo-element dapat diposisikan dengan benar */
+}
+
+/* Pseudo-element untuk garis bawah animasi */
+
+.link-hover::after {
+  content: '';
+  /* Membuat elemen kosong untuk garis bawah */
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  /* Garis bawah mulai dari lebar 0 */
+  height: 3px;
+  /* Ketebalan garis bawah */
+  background-color: #14b8a6;
+  /* Warna garis bawah, sesuai dengan warna teal */
+  transition: width 0.3s ease-in-out;
+  /* Transisi untuk animasi lebar garis bawah */
+}
+
+/* Efek hover untuk memperluas garis bawah */
+
+.link-hover:hover::after {
+  width: 100%;
+  /* Saat hover, garis bawah mengisi penuh dari kiri ke kanan */
+}
+
+/* Button dengan pseudo-element untuk animasi background */
+
+.btn-download::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  /* Mulai posisi background dari luar button */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #4fd1c5, #63b3ed);
+  /* Gradient dari teal ke biru */
+  transition: left 0.4s ease-in-out;
+  /* Animasi pergerakan background */
+  z-index: 0;
+}
+
+/* Ketika button dihover, pergerakan background akan menuju ke dalam button */
+
+.btn-download:hover::before {
+  left: 0;
+  /* Menampilkan gradient dengan pergerakan dari kiri ke kanan */
+}
+
+/* Menjaga teks tetap di atas background gradient */
+
+.btn-download a {
+  position: relative;
+  z-index: 10;
+  /* Pastikan teks tetap terlihat di atas pseudo-element */
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Custom CSS for Wave Animation ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -1431,6 +1502,24 @@ body.dark .wave3 use {
 
 .hover\:border-none:hover{
   border-style: none;
+}
+
+.hover\:border-transparent:hover{
+  border-color: transparent;
+}
+
+.hover\:border-slate-50:hover{
+  --tw-border-opacity: 1;
+  border-color: rgb(248 250 252 / var(--tw-border-opacity));
+}
+
+.hover\:border-slate-300:hover{
+  --tw-border-opacity: 1;
+  border-color: rgb(203 213 225 / var(--tw-border-opacity));
+}
+
+.hover\:border-s-transparent:hover{
+  border-inline-start-color: transparent;
 }
 
 .hover\:bg-gradient-to-r:hover{
